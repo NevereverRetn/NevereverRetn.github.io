@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo+github</title>
+    <url>/2020/01/06/hexo+github/</url>
+    <content><![CDATA[<p>&emsp;&emsp;需要一个github帐号<br><a href="https://github.com/nevereverretn" target="_blank" rel="noopener">https://github.com/nevereverretn</a>   </p>
+<p>&emsp;&emsp;需要github特定仓库来存储个人博客网站<br>username.github.io的username一定与前面的owner一致<br><a href="https://github.com/nevereverretn/nevereverretn.github.io" target="_blank" rel="noopener">https://github.com/nevereverretn/nevereverretn.github.io</a>  </p>
+<p>&emsp;&emsp;需要为github配置ssh key便于上传<br>&emsp;&emsp;ssh key可以防止其他人恶意部署文件到仓库，可以不配置<br>&emsp;&emsp;客户端生成ssh key<br>ssh-keygen -t rsa -C “<a href="mailto:youremail@example.com">youremail@example.com</a>“<br>&emsp;&emsp;服务端设置ssh key<br>Settings -&gt; SSH and GPG keys -&gt; New SSH key，添加客户端生成的id_rsa.pub中的内容</p>
+<p>&emsp;&emsp;安装插件<br>$ npm install hexo-deployer-git<br>&emsp;&emsp;如果git没有配置则全局配置<br>$ git config –global user.email “<a href="mailto:you@example.com">you@example.com</a>“<br>$ git config –global user.name “Your Name”<br>&emsp;&emsp;全局配置文件 ..\博客根目录\ _config.yml<br>&emsp;&emsp;上传github设置<br>deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repository: <a href="mailto:git@github.com">git@github.com</a>:nevereverretn/nevereverretn.github.io.git<br>&emsp;&emsp;branch: master<br>&emsp;&emsp;生成并上传<br>$ hexo d -g </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo+localhost</title>
+    <url>/2020/01/06/hexo+localhost/</url>
+    <content><![CDATA[<p>&emsp;&emsp;安装git<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a><br>$ git –version<br>git version 2.21.0.windows.1   </p>
+<p>&emsp;&emsp;安装node.js<br><a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a><br>$ node -v<br>v12.14.0<br>$ npm -v<br>6.13.4</p>
+<p>&emsp;&emsp;安装hexo<br>&emsp;&emsp;可以更改为国内的镜像源<br>$ npm get registry  获得原来的镜像地址<br><a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>$ npm config set registry <a href="http://registry.npm.taobao.org/" target="_blank" rel="noopener">http://registry.npm.taobao.org/</a> 淘宝镜像<br>$ npm install -g hexo<br>$ hexo –version<br>hexo-cli: 3.1.0<br>os: Windows_NT 6.1.7601 win32 x64<br>node: 12.14.0<br>v8: 7.7.299.13-node.16<br>uv: 1.33.1<br>zlib: 1.2.11<br>brotli: 1.0.7<br>ares: 1.15.0<br>modules: 72<br>nghttp2: 1.39.2<br>napi: 5<br>llhttp: 1.1.4<br>http_parser: 2.8.0<br>openssl: 1.1.1d<br>cldr: 35.1<br>icu: 64.2<br>tz: 2019c<br>unicode: 12.1</p>
+<p>&emsp;&emsp;初始化<br>$ mkdir selfblog<br>$ cd selfblog/<br>$ hexo init</p>
+<p>&emsp;&emsp;生成+本地预览<br>$ hexo s -g<br>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> . Press Ctrl+C to stop.</p>
+]]></content>
+  </entry>
+</search>
